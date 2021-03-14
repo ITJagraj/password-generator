@@ -18,3 +18,6 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+//Promt that box after clicking
+generateBtn.addEventListener("click , writePassword");
