@@ -20,4 +20,6 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 //Promt that box after clicking
-generateBtn.addEventListener("click , writePassword");
+function generatePassword() {
+   var passwordLenght = prompt("Please enter the number of characters. It must be more than 8 and less than 128") 
+}
