@@ -5,7 +5,7 @@
 var generateBtn = document.querySelector("#generate");
 
 //Special characters for the function created
-var specialCharacters = @!$#%*()"; 
+var specialCharacters = "@!$#%*()"; 
 
 // Write password to the #password input
 function writePassword() {
@@ -72,3 +72,16 @@ if (special === true) {
     minimumSpecialCharaters = functionArray[3];
     minimumCount++;
 }
+var randomPasswordGenerated = "";
+
+//starting for loop
+for(var i = 0; i < (parseInt(passwordLenght) - mimimumCount); i++) {
+var randomNumberPicked = Math.floor(math.random() * 4);
+}
+
+randomPasswordGenerated += minimumNumbers;
+randomPasswordGenerated += minimumLoweCases;
+randomPasswordGenerated += minimumUpperCases;
+randomPasswordGenerated += minimumSpecialCharaters;
+
+return randomPasswordGenerated;
