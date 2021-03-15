@@ -36,3 +36,39 @@ var minimumNumbers = "";
 var minimumLoweCases = "";
 var minimumUpperCases = "";
 var minimumSpecialCharaters = "";
+
+//generate functions
+
+var functionArray = [
+    function getNumbers() {
+        return String.fromCharCode(Math.floor(Math.random() * 10 + 48));
+    },
+    function getLowerCases() {
+        return String.fromCharCode(Math.floor(Math.random() * 26 + 97));
+    }, 
+    function getUpperCases() {
+    return String.fromCharCode(Math.floor(Math.random() * 26 + 95));
+    },
+    function getSpecialCharacters() {
+        returnspecialCharacters(Math.floor(Math.random() * specialCharacters.lenght));
+    }
+
+
+];
+//Starting loop 
+if (numbers === true) {
+    minimumNumbers = functionArray[0];
+    minimumCount++;
+}
+if (lowerCases === true) {
+    minimumLoweCases = functionArray[1];
+    minimumCount++;
+}
+if (upperCases === true) {
+    minimumUpperCases = functionArray[2];
+    minimumCount++;
+}
+if (special === true) {
+    minimumSpecialCharaters = functionArray[3];
+    minimumCount++;
+}
