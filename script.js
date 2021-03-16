@@ -1,6 +1,6 @@
 // Assignment code here
-var upperCases = "ABCD";
-var lowerCases = "abcd";
+var upperCases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lowerCases = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "0123456789";
 var special = "!@#$%^&*(){}[]=<>/,.";
  
@@ -8,7 +8,7 @@ var special = "!@#$%^&*(){}[]=<>/,.";
 var generateBtn = document.querySelector("#generate");
 
 //Special characters for the function created
-var specialCharacters = "@!$#%*()"; 
+var specialCharacters = "!@#$%^&*(){}[]=<>/,."; 
 
 // Write password to the #password input
 function writePassword() {
