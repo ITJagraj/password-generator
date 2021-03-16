@@ -1,44 +1,39 @@
 // Assignment code here
-var upperCases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var lowerCases = "abcdefghijklmnopqrstuvwxyz";
-var numbers = "0123456789";
-var special = "!@#$%^&*(){}[]=<>/,.";
- 
+var randomFunc = {
+lower: getRandomLower,
+upper: getRandomLower,
+number: getRandomLower,
+special: getRandomLower,
+};
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 //Special characters for the function created
-var specialCharacters = "!@#$%^&*(){}[]=<>/,."; 
+var special= "!@#$%^&*(){}[]=<>/,."; 
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 
 }
-
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
+generateBtn.addEventListener("click", () => {
+    generatePassword();
+});
+var passwordLength, numbers, lowerCases, upperCases, special;
 //Promt that box after clicking
 function generatePassword() {
-   var passwordLength = prompt("Please enter the number of characters. It must be more than 8 and less than 128"); 
-   var numbers = confirm("Do you want numbers in the password?");
-   var lowerCases = confirm("Do you want lowercases in your password?");
-   var UpperCases = confirm("Do you want uppercases in your password?");
-   var special = confirm("Do you want special charactiers in your password ?");
-
+    passwordLength = prompt("Please enter the number of characters. It must be more than 8 and less than 128"); 
+    numbers = confirm("Do you want numbers in the password?");
+    lowerCases = confirm("Do you want lowercases in your password?");
+    upperCases = confirm("Do you want uppercases in your password?");
+    special = confirm("Do you want special charactiers in your password ?");
+}
 //minimun count for numbers, lowercase, upercase and specailcharacters
-var minimumCOunt = 0;
-
-//Empty minimums for numbers, liwerCase, upperCases & special Characters
-
-var minimumNumbers = "";
-var minimumLoweCases = "";
-var minimumUpperCases = "";
-var minimumSpecialCharaters = "";
+var minimumCount = 0;
 
 //generate functions
 
@@ -94,12 +89,7 @@ if (numbers === true) {
   }
 
   // to make sure characters are added to the password
-  randomPasswordGenerated += minimumNumbers;
-  randomPasswordGenerated += minimumLowerCases;
-  randomPasswordGenerated += minimumUpperCases;
-  randomPasswordGenerated += minimumSpecialCharacters;
+  
 
 
-  return randomPasswordGenerated;
-
-}
+  
